@@ -1,4 +1,4 @@
-# This is my package laravel-poly-metrics
+# This is `laravel-poly-metrics` to log metrics for multiple models
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/emilhorlyck/laravel-poly-metrics.svg?style=flat-square)](https://packagist.org/packages/emilhorlyck/laravel-poly-metrics)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/emilhorlyck/laravel-poly-metrics/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/emilhorlyck/laravel-poly-metrics/actions?query=workflow%3Arun-tests+branch%3Amain)
