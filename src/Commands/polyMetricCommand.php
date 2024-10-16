@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace emilhorlyck\PolyMetric\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PolyMetricCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-poly-metrics';
 
     public $description = 'My command';
 

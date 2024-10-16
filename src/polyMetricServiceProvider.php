@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace emilhorlyck\PolyMetric;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use emilhorlyck\PolyMetric\Commands\PolyMetricCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class PolyMetricServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-poly-metrics')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_laravel_poly_metrics_table')
+            ->hasCommand(PolyMetricCommand::class);
     }
 }
