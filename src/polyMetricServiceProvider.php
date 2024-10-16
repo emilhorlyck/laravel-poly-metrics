@@ -17,7 +17,6 @@ class PolyMetricServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-poly-metrics')
             ->hasConfigFile()
-            ->hasAssets()
             ->hasMigration('create_daily_poly_metrics_table')
             ->hasMigration('create_monthly_poly_metrics_table');
     }
