@@ -12,7 +12,7 @@ class PolyMetric
         $dailyMetric = $this->setDaily($name, $value, $day, $month, $year);
         $monthlyMetric = $this->setMonthly($name, $value, $month, $year);
 
-        return [$dailyMetric->toArray(), $metric->toArray()];
+        return [$dailyMetric, $metric];
     }
 
     public function setDaily($name, $value, $day = null, $month = null, $year = null)
@@ -25,7 +25,7 @@ class PolyMetric
             'year' => $year ?? now()->year,
         ]);
 
-        return $metric->toArray();
+        return $metric;
     }
 
     public function setMonthly($name, $value, $month = null, $year = null)
@@ -37,6 +37,6 @@ class PolyMetric
             'year' => $year ?? now()->year,
         ]);
 
-        return $metric->toArray();
+        return $metric;
     }
 }
