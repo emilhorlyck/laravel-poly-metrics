@@ -23,30 +23,16 @@ You can install the package via composer:
 composer require emilhorlyck/laravel-poly-metrics
 ```
 
-You can publish and run the migrations with:
+You can publish all the necessary files with:
 
 ```bash
-php artisan vendor:publish --tag="poly-metrics-migrations"
+php artisan vendor:publish --provider="emilhorlyck\PolyMetric\PolyMetricServiceProvider"
+```
+
+You can them run the migrations with:
+
+```bash
 php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-poly-metrics-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-poly-metrics-views"
 ```
 
 ## Usage
