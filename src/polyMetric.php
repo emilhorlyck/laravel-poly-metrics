@@ -2,6 +2,9 @@
 
 namespace emilhorlyck\PolyMetric;
 
+use emilhorlyck\PolyMetric\Models\DailyMetric;
+use emilhorlyck\PolyMetric\Models\Metric;
+
 class PolyMetric
 {
     public function set($name, $value, $day = null, $month = null, $year = null): array
