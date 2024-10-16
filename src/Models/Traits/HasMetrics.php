@@ -1,6 +1,6 @@
 <?php
 
-namespace emilhorlyck\PolyMetric;
+namespace emilhorlyck\PolyMetric\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
