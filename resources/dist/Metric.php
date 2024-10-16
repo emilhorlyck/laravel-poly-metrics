@@ -4,7 +4,7 @@ namespace emilhorlyck\PolyMetric;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Metrics extends Model
+class Metric extends Model
 {
     protected $fillable = [
         'name',
@@ -15,7 +15,7 @@ class Metrics extends Model
 
     public static function incrementGeneralMetric(string $name, int $value = 1, $day = null, $month = null, $year = null, $excludeMonthlyMetric = false): void
     {
-        Metrics::firstOrCreate(
+        Metric::firstOrCreate(
             [
                 'model_type' => null,
                 'name' => $name,

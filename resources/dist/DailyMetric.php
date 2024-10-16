@@ -4,7 +4,7 @@ namespace emilhorlyck\PolyMetric;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DailyMetrics extends Model
+class DailyMetric extends Model
 {
     protected $fillable = [
         'name',
@@ -16,7 +16,7 @@ class DailyMetrics extends Model
 
     public static function incrementGeneralMetric(string $name, int $value = 1, $day = null, $month = null, $year = null, $excludeMonthlyMetric = false): void
     {
-        DailyMetrics::firstOrCreate(
+        DailyMetric::firstOrCreate(
             [
                 'model_type' => null,
                 'name' => $name,
@@ -30,7 +30,7 @@ class DailyMetrics extends Model
         )->increment('value', $value);
 
         if (! $excludeMonthlyMetric) {
-            Metrics::incrementGeneralMetric($name, $value, $day, $month, $year, true);
+            Metric::incrementGeneralMetric($name, $value, $day, $month, $year, true);
         }
     }
 }

@@ -14,7 +14,7 @@ class PolyMetric
 
     public function setDaily($name, $value, $day = null, $month = null, $year = null)
     {
-        $metric = DailyMetrics::Create([
+        $metric = DailyMetric::Create([
             'name' => $name,
             'value' => $value,
             'day' => $day ?? now()->day,
@@ -27,7 +27,7 @@ class PolyMetric
 
     public function setMonthly($name, $value, $month = null, $year = null)
     {
-        $metric = Metrics::Create([
+        $metric = Metric::Create([
             'name' => $name,
             'value' => $value,
             'month' => $month ?? now()->month,
