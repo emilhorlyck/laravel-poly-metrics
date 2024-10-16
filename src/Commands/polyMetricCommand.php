@@ -1,6 +1,6 @@
 <?php
 
-namespace Emilhorlyck\PolyMetric\Commands;
+namespace EmilHorlyck\PolyMetric\Commands;
 
 use Illuminate\Console\Command;
 

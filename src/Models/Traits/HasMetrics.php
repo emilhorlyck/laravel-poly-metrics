@@ -1,9 +1,9 @@
 <?php
 
-namespace Emilhorlyck\PolyMetric\Models\Traits;
+namespace EmilHorlyck\PolyMetric\Models\Traits;
 
-use Emilhorlyck\PolyMetric\Models\DailyMetric;
-use Emilhorlyck\PolyMetric\Models\Metric;
+use EmilHorlyck\PolyMetric\Models\DailyMetric;
+use EmilHorlyck\PolyMetric\Models\Metric;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasMetrics

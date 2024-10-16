@@ -1,6 +1,6 @@
 <?php
 
-namespace Emilhorlyck\PolyMetric\Database\Factories;
+namespace EmilHorlyck\PolyMetric\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

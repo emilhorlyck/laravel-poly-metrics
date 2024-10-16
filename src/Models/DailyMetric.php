@@ -1,6 +1,6 @@
 <?php
 
-namespace Emilhorlyck\PolyMetric\Models;
+namespace EmilHorlyck\PolyMetric\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Emilhorlyck\PolyMetric;
+namespace EmilHorlyck\PolyMetric;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
