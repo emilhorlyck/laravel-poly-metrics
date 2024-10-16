@@ -19,7 +19,8 @@ class PolyMetricServiceProvider extends PackageServiceProvider
             ->name('laravel-poly-metrics')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel_poly_metrics_table')
+            ->hasMigration('create_daily_laravel_poly_metrics_table')
+            ->hasMigration('create_monthly_laravel_poly_metrics_table')
             ->hasCommand(PolyMetricCommand::class);
     }
 }
