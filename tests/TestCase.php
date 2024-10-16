@@ -2,9 +2,9 @@
 
 namespace emilhorlyck\PolyMetric\Tests;
 
+use emilhorlyck\PolyMetric\PolyMetricServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use emilhorlyck\PolyMetric\PolyMetricServiceProvider;
 
 class TestCase extends Orchestra
 {

@@ -2,9 +2,9 @@
 
 namespace emilhorlyck\PolyMetric;
 
+use emilhorlyck\PolyMetric\Commands\PolyMetricCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use emilhorlyck\PolyMetric\Commands\PolyMetricCommand;
 
 class PolyMetricServiceProvider extends PackageServiceProvider
 {
