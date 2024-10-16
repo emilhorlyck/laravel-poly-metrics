@@ -7,6 +7,53 @@ use emilhorlyck\PolyMetric\Models\Metric;
 
 class PolyMetric
 {
+    // Conviniece methods for modifying metrics
+    public function setMetric($name, $value, $month = null, $year = null): array
+    {
+        return $this->set($name, $value, null, $month, $year);
+    }
+
+    public function setDailyMetric($name, $value, $day = null, $month = null, $year = null): DailyMetric
+    {
+        return $this->setDaily($name, $value, $day, $month, $year);
+    }
+
+    public function setMonthlyMetric($name, $value, $month = null, $year = null): Metric
+    {
+        return $this->setMonthly($name, $value, $month, $year);
+    }
+
+    public function incrementMetric($name, $value = 1, $month = null, $year = null): array
+    {
+        return $this->increment($name, $value, null, $month, $year);
+    }
+
+    public function incrementDailyMetric($name, $value = 1, $day = null, $month = null, $year = null): DailyMetric
+    {
+        return $this->incrementDaily($name, $value, $day, $month, $year);
+    }
+
+    public function incrementMonthlyMetric($name, $value = 1, $month = null, $year = null): Metric
+    {
+        return $this->incrementMonthly($name, $value, $month, $year);
+    }
+
+    public function decrementMetric($name, $value = 1, $month = null, $year = null): array
+    {
+        return $this->decrement($name, $value, null, $month, $year);
+    }
+
+    public function decrementDailyMetric($name, $value = 1, $day = null, $month = null, $year = null): DailyMetric
+    {
+        return $this->decrementDaily($name, $value, $day, $month, $year);
+    }
+
+    public function decrementMonthlyMetric($name, $value = 1, $month = null, $year = null): Metric
+    {
+        return $this->decrementMonthly($name, $value, $month, $year);
+    }
+
+    // Actually modifying metrics
     public function set($name, $value, $day = null, $month = null, $year = null): array
     {
         $dailyMetric = $this->setDaily($name, $value, $day, $month, $year);
