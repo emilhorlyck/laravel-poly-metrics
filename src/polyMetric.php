@@ -12,10 +12,10 @@ class PolyMetric
         $dailyMetric = $this->setDaily($name, $value, $day, $month, $year);
         $monthlyMetric = $this->setMonthly($name, $value, $month, $year);
 
-        return [$dailyMetric, $metric];
+        return [$dailyMetric, $monthlyMetric];
     }
 
-    public function setDaily($name, $value, $day = null, $month = null, $year = null)
+    public function setDaily($name, $value, $day = null, $month = null, $year = null): DailyMetric
     {
         $metric = DailyMetric::Create([
             'name' => $name,
@@ -28,7 +28,7 @@ class PolyMetric
         return $metric;
     }
 
-    public function setMonthly($name, $value, $month = null, $year = null)
+    public function setMonthly($name, $value, $month = null, $year = null): Metric
     {
         $metric = Metric::Create([
             'name' => $name,
