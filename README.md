@@ -5,15 +5,17 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/emilhorlyck/laravel-poly-metrics/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/emilhorlyck/laravel-poly-metrics/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/emilhorlyck/laravel-poly-metrics.svg?style=flat-square)](https://packagist.org/packages/emilhorlyck/laravel-poly-metrics)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package allows you to log metrics for multiple models, and even without relation to a models in laravel.
 
-## Support us
+## Features
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-poly-metrics.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-poly-metrics)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+-   [x] Log metrics without relation to a model
+    -   [x] Daily resolution
+    -   [x] Monthly resolution
+-   [ ] Log metrics with relation to a model
+    -   [ ] Daily resolution
+    -   [ ] Monthly resolution
+-   [ ] Offer traits to easily log metrics on models
 
 ## Installation
 
@@ -38,27 +40,23 @@ php artisan migrate
 ## Usage
 
 ```php
-$polyMetric = new emilhorlyck\PolyMetric();
-echo $polyMetric->echoPhrase('Hello, emilhorlyck!');
+
+// Modify metrics with daily and monthly resolution
+PolyMetric::set('my-metric', 42); // This will set the metric to 42
+PolyMetric::increment('my-metric'); // This will increment the metric by 1
+PolyMetric::decrement('my-metric'); // This will decrement the metric by 1
+
+// Modify metrics with only daily resolution
+PolyMetric::setDaily('my-metric', 42); // This will set the metric to 42
+PolyMetric::incrementDaily('my-metric'); // This will increment the metric by 1
+PolyMetric::decrementDaily('my-metric'); // This will decrement the metric by 1
+
+// Modify metrics with only monthly resolution
+PolyMetric::setMonthly('my-metric', 42); // This will set the metric to 42
+PolyMetric::incrementMonthly('my-metric'); // This will increment the metric by 1
+PolyMetric::decrementMonthly('my-metric'); // This will decrement the metric by 1
+
 ```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
