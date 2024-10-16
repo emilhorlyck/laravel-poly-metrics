@@ -1,5 +1,5 @@
 <?php
 
-use emilhorlyck\PolyMetric\Tests\TestCase;
+use Emilhorlyck\PolyMetric\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -28,7 +28,7 @@ composer require emilhorlyck/laravel-poly-metrics
 You can publish all the necessary files with:
 
 ```bash
-php artisan vendor:publish --provider="emilhorlyck\PolyMetric\PolyMetricServiceProvider"
+php artisan vendor:publish --provider="Emilhorlyck\PolyMetric\PolyMetricServiceProvider"
 ```
 
 You can them run the migrations with:

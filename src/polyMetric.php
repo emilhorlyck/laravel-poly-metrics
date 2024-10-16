@@ -1,9 +1,9 @@
 <?php
 
-namespace emilhorlyck\PolyMetric;
+namespace Emilhorlyck\PolyMetric;
 
-use emilhorlyck\PolyMetric\Models\DailyMetric;
-use emilhorlyck\PolyMetric\Models\Metric;
+use Emilhorlyck\PolyMetric\Models\DailyMetric;
+use Emilhorlyck\PolyMetric\Models\Metric;
 
 class PolyMetric
 {

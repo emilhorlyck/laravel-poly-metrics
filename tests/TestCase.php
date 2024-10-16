@@ -1,8 +1,8 @@
 <?php
 
-namespace emilhorlyck\PolyMetric\Tests;
+namespace Emilhorlyck\PolyMetric\Tests;
 
-use emilhorlyck\PolyMetric\PolyMetricServiceProvider;
+use Emilhorlyck\PolyMetric\PolyMetricServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
