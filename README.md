@@ -26,7 +26,7 @@ composer require emilhorlyck/laravel-poly-metrics
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-poly-metrics-migrations"
+php artisan vendor:publish --tag="poly-metrics-migrations"
 php artisan migrate
 ```
 
