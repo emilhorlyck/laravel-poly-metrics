@@ -10,12 +10,12 @@ trait HasMetrics
 {
     public function monthlyMetrics(): MorphMany
     {
-        return $this->morphMany(Metrics::class, name: 'model');
+        return $this->morphMany(Metric::class, name: 'model');
     }
 
     public function dailyMetrics(): MorphMany
     {
-        return $this->morphMany(DailyMetrics::class, name: 'model');
+        return $this->morphMany(DailyMetric::class, name: 'model');
     }
 
     public function setMetric(string $name, int $value, $day = null, $month = null, $year = null): array
