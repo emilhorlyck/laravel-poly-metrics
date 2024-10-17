@@ -3,7 +3,6 @@
 namespace EmilHorlyck\PolyMetric;
 
 use EmilHorlyck\PolyMetric\Commands\PolyMetricCommand;
-use Illuminate\Console\Scheduling\Schedule;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,11 +21,5 @@ class PolyMetricServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasMigration('create_daily_poly_metrics_table')
             ->hasMigration('create_monthly_poly_metrics_table');
-    }
-
-    public function packageBooted()
-    {
-        $schedule = $this->app->make(Schedule::class);
-        $schedule->command('some:command')->everyMinute();
     }
 }
