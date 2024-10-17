@@ -28,7 +28,7 @@ trait HasMetrics
 
     public function setDailyMetric(string $name, int $value, $day = null, $month = null, $year = null): DailyMetric
     {
-        return $this->dailyMetrics()->firstOrCreate(
+        return $this->dailyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'day' => $day ?? now()->day,
@@ -43,7 +43,7 @@ trait HasMetrics
 
     public function setMonthlyMetric(string $name, int $value, $month = null, $year = null): Metric
     {
-        return $this->monthlyMetrics()->firstOrCreate(
+        return $this->monthlyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'month' => $month ?? now()->month,
@@ -65,7 +65,7 @@ trait HasMetrics
 
     public function incrementDailyMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): DailyMetric
     {
-        $metric = $this->dailyMetrics()->firstOrCreate(
+        $metric = $this->dailyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'day' => $day ?? now()->day,
@@ -82,7 +82,7 @@ trait HasMetrics
 
     public function incrementMonthlyMetric(string $name, int $value = 1, $month = null, $year = null): Metric
     {
-        $metric = $this->metrics()->firstOrCreate(
+        $metric = $this->metrics()->updateOrCreate(
             [
                 'name' => $name,
                 'month' => $month ?? now()->month,
@@ -105,7 +105,7 @@ trait HasMetrics
 
     public function decrementDailyMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): DailyMetric
     {
-        $metric = $this->dailyMetrics()->firstOrCreate(
+        $metric = $this->dailyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'day' => $day ?? now()->day,
@@ -122,7 +122,7 @@ trait HasMetrics
 
     public function decrementMonthlyMetric(string $name, int $value = 1, $month = null, $year = null): Meitric
     {
-        $metric = $this->metrics()->firstOrCreate(
+        $metric = $this->metrics()->updateOrCreate(
             [
                 'name' => $name,
                 'month' => $month ?? now()->month,
