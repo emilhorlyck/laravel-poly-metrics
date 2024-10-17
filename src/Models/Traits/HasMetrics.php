@@ -36,7 +36,7 @@ trait HasMetrics
                 'year' => $year ?? now()->year,
             ],
             [
-                'value' => 0,
+                'value' => $value,
             ]
         );
     }
@@ -50,7 +50,7 @@ trait HasMetrics
                 'year' => $year ?? now()->year,
             ],
             [
-                'value' => 0,
+                'value' => $value,
             ]
         );
     }
