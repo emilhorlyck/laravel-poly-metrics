@@ -2,6 +2,7 @@
 
 namespace EmilHorlyck\PolyMetric\Commands;
 
+use EmilHorlyck\PolyMetric\Facades\PolyMetric;
 use Illuminate\Console\Command;
 
 class PolyMetricCommand extends Command
@@ -14,6 +15,6 @@ class PolyMetricCommand extends Command
     {
         $this->comment('All done');
 
-        return self::SUCCESS;
+        return PolyMetric::incrementMetric('cmd-executed');
     }
 }

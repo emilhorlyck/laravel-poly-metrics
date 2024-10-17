@@ -16,8 +16,15 @@ class PolyMetricServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-poly-metrics')
+            ->hasCommand(PolyMetricCommand::class)
             ->hasConfigFile()
             ->hasMigration('create_daily_poly_metrics_table')
             ->hasMigration('create_monthly_poly_metrics_table');
+    }
+
+    public function packageBooted()
+    {
+        $schedule = $this->app->make(Schedule::class);
+        $schedule->command('some:command')->everyMinute();
     }
 }
