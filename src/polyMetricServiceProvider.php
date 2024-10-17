@@ -2,6 +2,7 @@
 
 namespace EmilHorlyck\PolyMetric;
 
+use EmilHorlyck\PolyMetric\Commands\PolyMetricCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
