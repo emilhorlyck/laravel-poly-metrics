@@ -75,6 +75,7 @@ trait HasMetrics
         );
 
         $metric->increment('value', $value);
+        $metric->refresh();
 
         return $metric;
 
@@ -91,6 +92,7 @@ trait HasMetrics
         );
 
         $metric->increment('value', $value);
+        $metric->refresh();
 
         return $metric;
     }
@@ -115,6 +117,7 @@ trait HasMetrics
         );
 
         $metric->decrement('value', $value);
+        $metric->refresh();
 
         return $metric;
 
@@ -131,6 +134,7 @@ trait HasMetrics
         );
 
         $metric->decrement('value', $value);
+        $metric->refresh();
 
         return $metric;
     }
