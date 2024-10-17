@@ -83,7 +83,7 @@ trait HasMetrics
 
     public function incrementMonthlyMetric(string $name, int $value = 1, $month = null, $year = null): Metric
     {
-        $metric = $this->metrics()->updateOrCreate(
+        $metric = $this->monthlyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'month' => $month ?? now()->month,
@@ -125,7 +125,7 @@ trait HasMetrics
 
     public function decrementMonthlyMetric(string $name, int $value = 1, $month = null, $year = null): Meitric
     {
-        $metric = $this->metrics()->updateOrCreate(
+        $metric = $this->monthlyMetrics()->updateOrCreate(
             [
                 'name' => $name,
                 'month' => $month ?? now()->month,
