@@ -59,7 +59,7 @@ trait HasMetrics
     {
         return [
             'daily' => $this->incrementDailyMetric($name, $value, $day, $month, $year),
-            'monthly' => $this->incrementMetric($name, $value, $month, $year),
+            'monthly' => $this->incrementMonthlyMetric($name, $value, $month, $year),
         ];
     }
 
@@ -101,7 +101,7 @@ trait HasMetrics
     {
         return [
             'daily' => $this->decrementDailyMetric($name, $value, $day, $month, $year),
-            'monthly' => $this->decrementMetric($name, $value, $month, $year),
+            'monthly' => $this->decrementMonthlyMetric($name, $value, $month, $year),
         ];
     }
 
