@@ -20,12 +20,9 @@ trait HasMetrics
 
     public function setMetric(string $name, int $value, $day = null, $month = null, $year = null): array
     {
-        $this->setDailyMetric($name, $value, $day, $month, $year);
-        $this->setMonthlyMetric($name, $value, $month, $year);
-
         return [
-            'daily' => $this->dailyMetrics()->where('name', $name)->first(),
-            'monthly' => $this->monthlyMetrics()->where('name', $name)->first(),
+            'daily' => $this->setDailyMetric($name, $value, $day, $month, $year),
+            'monthly' => $this->setMonthlyMetric($name, $value, $month, $year),
         ];
     }
 
@@ -60,12 +57,9 @@ trait HasMetrics
 
     public function incrementMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): array
     {
-        $this->incrementDailyMetric($name, $value, $day, $month, $year);
-        $this->incrementMetric($name, $value, $month, $year);
-
         return [
-            'daily' => $this->dailyMetrics()->where('name', $name)->first(),
-            'monthly' => $this->monthlyMetrics()->where('name', $name)->first(),
+            'daily' => $this->incrementDailyMetric($name, $value, $day, $month, $year),
+            'monthly' => $this->incrementMetric($name, $value, $month, $year),
         ];
     }
 
@@ -103,12 +97,9 @@ trait HasMetrics
 
     public function decrementMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): array
     {
-        $this->decrementDailyMetric($name, $value, $day, $month, $year);
-        $this->decrementMetric($name, $value, $month, $year);
-
         return [
-            'daily' => $this->dailyMetrics()->where('name', $name)->first(),
-            'monthly' => $this->monthlyMetrics()->where('name', $name)->first(),
+            'daily' => $this->decrementDailyMetric($name, $value, $day, $month, $year),
+            'monthly' => $this->decrementMetric($name, $value, $month, $year),
         ];
     }
 
