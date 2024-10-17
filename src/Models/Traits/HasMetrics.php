@@ -71,7 +71,7 @@ trait HasMetrics
 
     public function incrementDailyMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): DailyMetric
     {
-        $metric = $this->dailyMetric()->firstOrCreate(
+        $metric = $this->dailyMetrics()->firstOrCreate(
             [
                 'name' => $name,
                 'day' => $day ?? now()->day,
@@ -114,7 +114,7 @@ trait HasMetrics
 
     public function decrementDailyMetric(string $name, int $value = 1, $day = null, $month = null, $year = null): DailyMetric
     {
-        $metric = $this->dailyMetric()->firstOrCreate(
+        $metric = $this->dailyMetrics()->firstOrCreate(
             [
                 'name' => $name,
                 'day' => $day ?? now()->day,
