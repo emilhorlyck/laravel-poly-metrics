@@ -1,6 +1,7 @@
 {
     "name": "emilhorlyck/laravel-poly-metrics",
     "description": "This is my package laravel-poly-metrics",
+    "version": "0.1.0",
     "keywords": [
         "emilhorlyck",
         "laravel",
