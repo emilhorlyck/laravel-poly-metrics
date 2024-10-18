@@ -12,10 +12,13 @@ This package allows you to log metrics for multiple models, and even without rel
 -   [x] Log metrics without relation to a model
     -   [x] Daily resolution
     -   [x] Monthly resolution
--   [ ] Log metrics with relation to a model
-    -   [ ] Daily resolution
-    -   [ ] Monthly resolution
--   [ ] Offer traits to easily log metrics on models
+-   [x] Log metrics with relation to a model
+    -   [x] Daily resolution
+    -   [x] Monthly resolution
+-   [x] Offer traits to easily log metrics on models
+-   [ ] Offer command to purge old metrics
+-   [ ] Offer command to purge old metrics for a specific model
+-   [ ] Deafult scheduled command to purge old metrics
 
 ## Installation
 
@@ -39,6 +42,8 @@ php artisan migrate
 
 ## Usage
 
+### Log metrics without relation to a model
+
 ```php
 
 // Modify metrics with daily and monthly resolution
@@ -56,6 +61,40 @@ PolyMetric::setMonthly('my-metric', 42); // This will set the metric to 42
 PolyMetric::incrementMonthly('my-metric'); // This will increment the metric by 1
 PolyMetric::decrementMonthly('my-metric'); // This will decrement the metric by 1
 
+```
+
+### Log metrics with relation to a model
+
+Add the `HasMetrics` trait to your model.
+
+```php
+use EmilHorlyck\PolyMetric\Traits\HasMetrics;
+
+class User extends Model
+{
+    use HasMetrics;
+}
+```
+
+Log metrics on the model
+
+```php
+$user = User::find(1);
+
+// Modify metrics with daily and monthly resolution
+$user->setMetric('my-metric', 42); // This will set the metric to 42
+$user->incrementMetric('my-metric'); // This will increment the metric by 1
+$user->decrementMetric('my-metric'); // This will decrement the metric by 1
+
+// Modify metrics with only daily resolution
+$user->setDailyMetric('my-metric', 42); // This will set the metric to 42
+$user->incrementDailyMetric('my-metric'); // This will increment the metric by 1
+$user->decrementDailyMetric('my-metric'); // This will decrement the metric by 1
+
+// Modify metrics with only monthly resolution
+$user->setMonthlyMetric('my-metric', 42); // This will set the metric to 42
+$user->incrementMonthlyMetric('my-metric'); // This will increment the metric by 1
+$user->decrementMonthlyMetric('my-metric'); // This will decrement the metric by 1
 ```
 
 ## Credits
