@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "EmilHorlyck\\PolyMetric\\": "src/",
-            "EmilHorlyck\\PolyMetric\\Database\\Factories\\": "database/factories/"
+            "emilhorlyck\\PolyMetric\\": "src/",
+            "emilhorlyck\\PolyMetric\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "EmilHorlyck\\PolyMetric\\Tests\\": "tests/",
+            "emilhorlyck\\PolyMetric\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -73,10 +73,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "EmilHorlyck\\PolyMetric\\PolyMetricServiceProvider"
+                "emilhorlyck\\PolyMetric\\PolyMetricServiceProvider"
             ],
             "aliases": {
-                "PolyMetric": "EmilHorlyck\\PolyMetric\\Facades\\PolyMetric"
+                "PolyMetric": "emilhorlyck\\PolyMetric\\Facades\\PolyMetric"
             }
         }
     },
