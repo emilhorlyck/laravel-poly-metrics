@@ -2,7 +2,6 @@
 
 namespace EmilHorlyck\PolyMetric;
 
-use EmilHorlyck\PolyMetric\Commands\PolyMetricCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,7 +16,6 @@ class PolyMetricServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-poly-metrics')
-            ->hasCommand(PolyMetricCommand::class)
             ->hasConfigFile()
             ->hasMigration('create_daily_poly_metrics_table')
             ->hasMigration('create_monthly_poly_metrics_table');
